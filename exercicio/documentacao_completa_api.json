@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "1fd8abf7-7d5a-40a3-81d2-8f78f9f81e90",
+        "_postman_id": "aea40fb4-d0c8-474a-9f3b-5a04541bc538",
         "name": "teste api",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": ""
@@ -24,7 +24,7 @@
             }
         },
         {
-            "name": "INSERE UM CURSO OPCAO 1 JSON",
+            "name": "INSERE UM CURSO",
             "request": {
                 "method": "POST",
                 "url": {
@@ -53,7 +53,7 @@
                             "language": "json"
                         }
                     },
-                    "raw": "{\n  \"nome_curso\": \"TESTE\"\n}"
+                    "raw": "{\n  \"nome_curso\": \"MECÂNICA\"\n}"
                 }
             }
         },
@@ -163,31 +163,7 @@
             }
         },
         {
-            "name": "INSERE UM CURSO OPCAO 2 PARAMETROS",
-            "request": {
-                "method": "POST",
-                "url": {
-                    "raw": "localhost/exercicio/api.php/cursos?nome_curso=TESTE 2",
-                    "query": [
-                        {
-                            "key": "nome_curso",
-                            "value": "TESTE 2"
-                        }
-                    ],
-                    "variable": [],
-                    "path": [
-                        "exercicio",
-                        "api.php",
-                        "cursos"
-                    ],
-                    "host": [
-                        "localhost"
-                    ]
-                }
-            }
-        },
-        {
-            "name": "INSERE UM ALUNO OPCAO 1 JSON",
+            "name": "INSERE UM ALUNO",
             "request": {
                 "method": "POST",
                 "url": {
@@ -216,7 +192,7 @@
                             "language": "json"
                         }
                     },
-                    "raw": "{\n  \"fk_cursos_id_curso\": 4,\n  \"nome\": \"FULANINHO\",\n  \"email\": \"fulaninho@email.com\"\n}"
+                    "raw": "{\n  \"fk_cursos_id_curso\": 3,\n  \"nome\": \"ANDERSON\",\n  \"email\": \"anderson@email.com\"\n}"
                 }
             }
         },
@@ -268,7 +244,24 @@
                             "language": "json"
                         }
                     },
-                    "raw": "{\n  \"id_curso\" : 6\n}"
+                    "raw": "{\n  \"id_curso\" : 10\n}"
+                }
+            }
+        },
+        {
+            "name": "TOTAL DE ALUNOS E CURSOS",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost/exercicio/api.php/totais",
+                    "path": [
+                        "exercicio",
+                        "api.php",
+                        "totais"
+                    ],
+                    "host": [
+                        "localhost"
+                    ]
                 }
             }
         }
